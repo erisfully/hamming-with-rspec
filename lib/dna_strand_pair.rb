@@ -6,22 +6,17 @@ class DnaStrandPair
   end
 
   def hamming_distance
-    first = @strand_1.split(//)
-    second = @strand_2.split(//)
 
     x=0
     y=0
 
-    while y < first.count && y < second.count
-      if first[y] == second[y]
-        x += 0
-      else
+    while y < @strand_1.length && y < @strand_2.length
+      if @strand_1[y] != @strand_2[y]
         x += 1
       end
-      y += 1
-    end
+        y += 1
+      end
     x
-
   end
 
 end
